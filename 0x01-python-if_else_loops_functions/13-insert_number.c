@@ -9,12 +9,13 @@ listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new, *prev;
 
+	printf("g\n");
 	new = malloc(sizeof(listint_t *));
 	new->n = number;
-	write(1, "h0\n", 3);
+	printf("h0\n");
 	if (!head)
 	{
-		write(1, "h1\n", 3);
+		printf("h1\n");
 		head = &new;
 		new->next = NULL;
 		return (new);
