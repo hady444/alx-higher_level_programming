@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-mod = abs(number) % 1
+mod = abs(number) % 10
 if mod > 5:
     print(f"the last digit of {number} is {mod} and is greater than 5")
 elif mod == 0:
