@@ -4,6 +4,5 @@ def remove_char_at(str, n):
     for i, x in enumerate(str):
         if (i == n):
             continue
-        print(x, end='')
         cp += x
     return cp
