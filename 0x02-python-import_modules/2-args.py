@@ -4,7 +4,7 @@ if __name__ != "__main__":
     exit()
 
 argc = len(sys.argv)
-print("{:d}: argumnt".format(argc - 1), end='')
+print("{:d}: argument".format(argc - 1), end='')
 if argc == 1:
     print("s.")
 elif argc == 2:
