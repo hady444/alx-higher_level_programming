@@ -4,9 +4,10 @@ if __name__ != "__main__":
     exit()
 
 argc = len(sys.argv)
+print("{:d}: argumnts".format(argc - 1), end='')
 if argc == 1:
-    print("0: argumnts.")
+    print(".")
 else:
-    print("{:d}: argumnts:".format(argc - 1))
+    print(":")
     for i in range(1, argc):
         print("{:d}: {}".format(i, sys.argv[i]))
