@@ -5,7 +5,7 @@ if __name__ != "main":
 
 argc = len(sys.argv)
 i = 1
-sum = 0
+summ = 0
 for arg in sys.argv:
     if i == 1:
         i += 1
@@ -13,6 +13,6 @@ for arg in sys.argv:
     if arg == ' ':
         i += 1
         continue
-    sum += int(arg)
+    summ += int(arg)
     i += 1
-print(sum)
+print(summ)
