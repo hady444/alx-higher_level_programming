@@ -9,6 +9,7 @@ if argc == 1:
     print("s.")
 elif argc == 2:
     print(":")
+    print("{:d}: {}".format(1, sys.argv[1]))
 else:
     print("s:")
     for i in range(1, argc):
