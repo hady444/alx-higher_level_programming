@@ -3,7 +3,6 @@ import sys
 if __name__ != "main":
     exit()
 
-argc = len(sys.argv)
 i = 1
 summ = 0
 for arg in sys.argv:
