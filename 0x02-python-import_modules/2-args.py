@@ -4,7 +4,7 @@ if __name__ != "__main__":
     exit()
 
 argc = len(sys.argv)
-arg_S = "{:d}: argument"
+arg_S = "{:d} argument"
 if argc == 1:
     arg_S += 's.'
 elif argc == 2:
