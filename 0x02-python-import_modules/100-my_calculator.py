@@ -3,8 +3,8 @@ import sys
 from calculator_1 import add, sub, mul, div
 if __name__ != "__main__":
     exit()
-if len(sys.argv) != 3:
-    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+if len(sys.argv) != 4:
+    print("Usage: {:s} <a> <operator> <b>".format(sys.argv[0]))
     exit(1)
 if sys.argv[2] not in "+-*/":
     print("Unknown operator. Available operators: +, -, * and /")
