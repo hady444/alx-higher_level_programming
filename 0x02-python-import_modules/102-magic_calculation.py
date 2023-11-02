@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+import magic_calculation_102
 if __name__ != "__main__":
     exit()
 def magic_calculation(a, b):
-    add, sub = amagic_calculation_102.add, magic_calculation_102.sub
+    add, sub = magic_calculation_102.add, magic_calculation_102.sub
 
     if a < b:
         c = add(a, b)
