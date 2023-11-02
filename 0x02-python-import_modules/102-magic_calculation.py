@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import magic_calculation_102
+#import magic_calculation_102
 #if __name__ != "__main__":
 #    exit()
 def magic_calculation(a, b):
