@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
-if __name__ != "main":
-    exit()
+#if __name__ != "main":
+#    exit()
 
 argc = len(sys.argv)
 i = 1
