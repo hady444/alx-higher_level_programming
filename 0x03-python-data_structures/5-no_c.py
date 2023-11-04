@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
+    if my_string == "":
+        return ""
     my_string = list(my_string)
     for i, letter in enumerate(my_string):
         if letter in 'cC':
