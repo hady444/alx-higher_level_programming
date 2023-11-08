@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
             if i != 0:
                 prev = roman_string[i - 1]
                 if Romans.get(N) > Romans.get(prev):
-                    number += (Romans.get(N) - 2 * Romans.get(prev))
+                    number += (Romans.get(N) - (2 * Romans.get(prev)))
                     continue
             number += Romans.get(N)
         else:
