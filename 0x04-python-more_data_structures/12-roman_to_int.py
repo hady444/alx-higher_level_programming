@@ -11,8 +11,8 @@ def roman_to_int(roman_string):
                         number += (Romans.get(N) - (2 * Romans.get(prev)))
                         continue
                 number += Romans.get(N)
-            else:
-                return None
+#            else:
+#                return None
     else:
         return None
     return number
