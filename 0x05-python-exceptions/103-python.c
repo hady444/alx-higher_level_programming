@@ -36,20 +36,21 @@ void print_python_bytes(PyObject *p)
  */
 void print_python_list(PyObject *p)
 {
+	Py_ssize_t size;
+	PyObject *element;
+
 	printf("[*] Python list info\n");
 	if (!PyList_Check(p))
 	{
 		printf("  [ERROR] Invalid List Object\n");
 		return;
 	}
-	Py_ssize_t size = PyList_Size(p);
-
+	size = PyList_Size(p);
 	printf("[*] Size of the Python List = %ld\n", size);
 	printf("[*] Allocated = %ld\n", ((PyListObject *)p)->allocated);
-
 	for (Py_ssize_t i = 0; i < size; ++i)
 	{
-		PyObject *element = PyList_GetItem(p, i);
+		element = PyList_GetItem(p, i);
 
 		printf("Element %ld: ", i);
 		if (PyBytes_Check(element))
