@@ -18,7 +18,6 @@ void print_python_bytes(PyObject *p)
 
 	printf("  size: %ld\n", PyBytes_Size(p));
 	printf("  trying string: %s\n", PyBytes_AsString(p));
-    
 	printf("  first 10 bytes: ");
 	fflush(stdout);
 	for (Py_ssize_t i = 0; i < PyBytes_Size(p) && i < 10; ++i)
@@ -30,7 +29,6 @@ void print_python_bytes(PyObject *p)
 /**
  * print_python_list - Prints information about a Python list object
  * @p: Pointer to a Python object
- *
  * This function checks if the given Python object is a valid list object,
  * and if so, prints information about the list size, allocated space, and
  * detailed information about each element in the list, including handling
@@ -44,16 +42,16 @@ void print_python_list(PyObject *p)
 		printf("  [ERROR] Invalid List Object\n");
 		return;
 	}
-
 	Py_ssize_t size = PyList_Size(p);
+
 	printf("[*] Size of the Python List = %ld\n", size);
 	printf("[*] Allocated = %ld\n", ((PyListObject *)p)->allocated);
 
 	for (Py_ssize_t i = 0; i < size; ++i)
 	{
 		PyObject *element = PyList_GetItem(p, i);
-		printf("Element %ld: ", i);
 
+		printf("Element %ld: ", i);
 		if (PyBytes_Check(element))
 		{
 			print_python_bytes(element);
