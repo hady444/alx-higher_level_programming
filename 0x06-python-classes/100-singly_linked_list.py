@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-"""classes for singly linked list"""
-
-
 class Node:
     """100-linked list"""
 
