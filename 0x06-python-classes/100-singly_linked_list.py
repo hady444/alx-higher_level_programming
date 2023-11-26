@@ -29,11 +29,6 @@ class Node:
         return self.__next_node = value
 
 
-"""
-lin
-"""
-
-
 class SinglyLinkedlist:
     """linked"""
 
