@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""100"""
+"""classes for singly linked list"""
 
 
 class Node:
     """100-linked list"""
+
     def __init__(self, data, next_node=None):
         self.__data = data
         self.__next_node = next_node
