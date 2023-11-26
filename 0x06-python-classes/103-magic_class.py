@@ -2,6 +2,7 @@
 import math
 """kmgf"""
 
+
 class MagicClass:
     """fdfdf"""
 
