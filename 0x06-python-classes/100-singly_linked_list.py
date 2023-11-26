@@ -28,6 +28,8 @@ class Node:
             raise TypeError("next_node must be a Node object")
         return self.__next_node = value
 
+"""lin"""
+
 
 class SinglyLinkedlist:
     """linked"""
