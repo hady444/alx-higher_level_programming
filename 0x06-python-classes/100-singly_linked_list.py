@@ -6,6 +6,7 @@ class Node:
     """100-linked list"""
 
     def __init__(self, data, next_node=None):
+        """ds"""
         self.__data = data
         self.__next_node = next_node
 
@@ -34,6 +35,7 @@ class SinglyLinkedlist:
     """linked"""
 
     def __init__(self):
+        """ds"""
         self.__head = None
 
     def sorted_insert(self, value):
