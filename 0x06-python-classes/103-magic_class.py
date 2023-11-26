@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-import math
-"""kmgf"""
+"""kfd"""
 
+
+import math
 
 class MagicClass:
     """fdfdf"""
