@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Defined classes"""
+
+
 class Node:
     """100-linked list"""
 
