@@ -28,7 +28,7 @@ class Square:
         return self.__position
 
     @position.setter
-    def size(self, position=(0, 0)):
+    def position(self, position=(0, 0)):
         """setter"""
         self.__position = position
         if type(self.__position) != tuple or len(self.__position) != 2:
