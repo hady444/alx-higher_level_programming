@@ -5,6 +5,9 @@ import math
 
 
 class MagicClass:
+    """fdfdf"""
+
+
     def __init__(self, radius=0):
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
