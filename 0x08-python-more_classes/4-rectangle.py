@@ -18,7 +18,8 @@ class Rectangle:
         return "\n".join(x)
 
     def __repr__(self):
-        return '{}({}, {})'.format(type(self).__name__, self.__width, self.__height)
+        return f'{type(self).__name__}({self.__width}, {self.__height})'
+
     @property
     def width(self):
         return self.__width
