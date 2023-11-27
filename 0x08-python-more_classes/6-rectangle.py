@@ -4,12 +4,13 @@
 
 class Rectangle:
     """
-    Rectangle 5
+    Rectangle 6
     """
 
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
+        self.number_of_instances = number_of_instances + 1
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
