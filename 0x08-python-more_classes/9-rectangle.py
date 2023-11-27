@@ -18,13 +18,8 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        size = str(self.print_symbol) * self.__width
-        rect = []
-        for index in range(self.__height):
-            rect.append(size)
-        return "\n".join(rect)
-        #x = [str(self.print_symbol) * self.__width] * self.__height
-        #return "\n".join(x)
+        x = [str(self.print_symbol) * self.__width] * self.__height
+        return "\n".join(x)
 
     def __repr__(self):
         return f'{type(self).__name__}({self.__width}, {self.__height})'
@@ -62,7 +57,7 @@ class Rectangle:
 
     def perimeter(self):
         if self.__height == 0 or self.__width == 0:
-            return 0
+            return
         return (2 * (self.__height + self.__width))
 
     @staticmethod
@@ -78,8 +73,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """initializes a new square instance"""
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
         return cls(size, size)
