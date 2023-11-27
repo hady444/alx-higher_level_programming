@@ -18,7 +18,7 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        x = [str(Rectangle.print_sympol) * self.__width] * self.__height
+        x = [str(Rectangle.print_symbol) * self.__width] * self.__height
         return "\n".join(x)
 
     def __repr__(self):
