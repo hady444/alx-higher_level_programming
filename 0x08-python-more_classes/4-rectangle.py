@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Rectangle 3
+    Rectangle 4
     """
 
     def __init__(self, width=0, height=0):
@@ -16,6 +16,12 @@ class Rectangle:
             return ""
         x = ['#' * self.__width] * self.__height
         return "\n".join(x)
+
+    def __repr__(self):
+        return '{}({}, {})'.format(type(self).__name__, self.__width, self.__height)
+    @property
+    def width(self):
+        return self.__width
 
     @width.setter
     def width(self, value):
