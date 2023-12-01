@@ -6,16 +6,7 @@ Module
 
 import unittest
 
-
-def max_integer(list=[]):
-    """Get max number
-
-    Args:
-        list (list):list contain numbers. Defaults to [].
-    Return:
-        max number
-    """
-    return max(list)
+max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
