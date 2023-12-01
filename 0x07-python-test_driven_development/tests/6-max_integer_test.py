@@ -31,7 +31,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([10]), 10)
 
     def Test_Is_empty(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             max_integer([])
 
 if __name__ == '__main__':
