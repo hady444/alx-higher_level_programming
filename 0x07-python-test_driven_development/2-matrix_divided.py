@@ -15,25 +15,19 @@ def matrix_divided(matrix, div):
     int or float elements or div is neither not int or float
     :raises ZeroDivisionError: if div = 0
     """
-    result = []
-    em = "matrix must be a matrix (list of lists) of integers/floats"
-    if not matrix:
-        raise TypeError(em)
-    if not isinstance(matrix, list):
-        raise TypeError(em)
-    for lists in matrix:
-        if not isinstance(lists, list):
-            raise TypeError(em)
-        for item in lists:
-            if not isinstance(item, int) and not isinstance(item, float):
-                raise TypeError(em)
-    for lists in matrix:
-        if len(lists) == 0:
-            raise TypeError(em)
-    if not isinstance(div, int) and not isinstance(div, float):
+    if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    if not all(len(lists) == len(matrix[0]) for lists in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
-    return [[round(item / div, 2) for item in lists] for lists in matrix]
+    if not isinstance(matrix, list) or len(matrix) == 0:
+        raise TypeError("matrix must be a matrix (list of lists) " +
+                        "of integers/floats")
+    for row in matrix:
+        if not isinstance(row, list) or len(row) == 0:
+            raise TypeError("matrix must be a matrix (list of lists) " +
+                            "of integers/floats")
+        if len(row) != len(matrix[0]):
+            raise TypeError("Each row of the matrix must have the same size")
+        for x in row:
+            if not isinstance(x, (int, float)):
+                raise TypeError("matrix must be a matrix (list of lists) " +
+                                "of integers/floats")
+    return [[round(x / div, 2) for x in row] for row in matrix]
