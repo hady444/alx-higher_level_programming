@@ -17,11 +17,19 @@ def matrix_divided(matrix, div):
     """
     result = []
     em = "matrix must be a matrix (list of lists) of integers/floats"
-    if (not all(isinstance(row, list) for row in matrix) or
-            not all(isinstance(vl, (int, float)) for ro in matrix for vl in ro)
-            or len(matrix) == 0 or
-            any(len(row) == 0 for row in matrix)):
+    if not matrix:
         raise TypeError(em)
+    if not isinstance(matrix, list):
+        raise TypeError(em)
+    for lists in matrix:
+        if not isinstance(lists, list):
+            raise TypeError(em)
+        for item in lists:
+            if not isinstance(item, int) and not isinstance(item, float):
+                raise TypeError(em)
+    for lists in matrix:
+        if len(lists) == 0:
+            raise TypeError(em)
     if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     if div == 0:
