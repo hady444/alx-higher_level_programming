@@ -32,7 +32,7 @@ def matrix_divided(matrix, div):
         if row_len != len(ls):
             raise TypeError("Each row of the matrix must have the same size")
         for x in ls:
-            row.append(format(x / div, '.2f'))
+            row.append(round(x / div, 2))
         result.append(row)
         row = []
     return result
