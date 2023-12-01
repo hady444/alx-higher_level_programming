@@ -5,6 +5,16 @@ Module
 
 
 def matrix_divided(matrix, div):
+    """
+    matrix elements is going to be divided over a div numbet
+
+    :param matrix: provided matrix
+    :param div: number to divide over
+    :return: going to return result matrix after division
+    :raises TypeError: if the matrix is empty or none or contain no
+    int or float elements or div is neither not int or float
+    :raises ZeroDivisionError: if div = 0
+    """
     result = []
     em = "matrix must be a matrix (list of lists) of integers/floats"
     if not not all(isinstance(row, list) for row in matrix)
