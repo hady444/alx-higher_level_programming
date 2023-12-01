@@ -18,5 +18,3 @@ def print_square(size):
         my_result.append(["#" * size])
     flattened_result = [str(item) for sublist in my_result for item in sublist]
     print('\n'.join(flattened_result))
-
-print_square()
