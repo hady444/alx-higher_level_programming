@@ -18,9 +18,6 @@ def matrix_divided(matrix, div):
     result = []
     em = "matrix must be a matrix (list of lists) of integers/floats"
     if (not all(isinstance(row, list) for row in matrix) or
-        not all(isinstance(val, (int, float)) for row in matrix for val in row) or
-        len(matrix) == 0 or
-        any(len(row) == 0 for row in matrix)):
             not all(isinstance(vl, (int, float)) for ro in matrix for vl in ro)
             or len(matrix) == 0 or
             any(len(row) == 0 for row in matrix)):
@@ -39,4 +36,3 @@ def matrix_divided(matrix, div):
         result.append(row)
         row = []
     return result
-print(matrix_divided())
