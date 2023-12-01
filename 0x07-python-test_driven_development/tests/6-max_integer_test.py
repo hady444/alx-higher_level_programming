@@ -5,7 +5,6 @@ Module
 
 
 import unittest
-
 max_integer = __import__('6-max_integer').max_integer
 
 
@@ -34,3 +33,6 @@ class TestMaxInteger(unittest.TestCase):
     def Test_Is_empty(self):
         with self.assertRaises(ValueError):
             max_integer([])
+
+if __name__ == '__main__':
+    unittest.main()
