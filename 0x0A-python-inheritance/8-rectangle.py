@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+"""Module"""
+
+
+class Rectangle(BaseGeometry):
+    """
+    BaseGeometry class
+    """
+    def __init__(self, width, height):
+        super().integer_validator("width", widht)
+        self.width = width
+        super().integer_validator("width", height)
+        self.height = height
