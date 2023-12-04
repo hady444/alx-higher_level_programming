@@ -6,7 +6,7 @@ is object from this class
 
 def is_same_class(obj, a_class):
     """check if object from provided class
-    
+
     Args:
         obj: object passed
         a_class: class
@@ -14,4 +14,6 @@ def is_same_class(obj, a_class):
         True if in
         False if out
     """
-    return isinstance(obj, a_class)
+    if a_class == object:
+        return
+    return (isinstance(obj, a_class))
