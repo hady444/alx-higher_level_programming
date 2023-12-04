@@ -8,15 +8,18 @@
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
+
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.print_sorted()
 [1]
 
+Empty list
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
 
+Negative Numbers
 >>> my_list = MyList()
 >>> my_list.append(-10)
 >>> my_list.append(3)
@@ -25,3 +28,7 @@
 >>> my_list.append(100000)
 >>> my_list.print_sorted()
 [-100, -10, 3, 982, 100000]
+
+>>> l1 = MyList()
+    >>> type(l1)
+    <class '1-my_list.MyList'>
