@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""
-empty class
-"""
+"""empty class"""
 
 
-class base_geometry:
+class BaseGeometry:
     """
     Empty class
     """
