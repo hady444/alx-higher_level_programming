@@ -14,4 +14,6 @@ def inherits_from(obj, a_class):
         True if in
         False if out
     """
-    return (isinstance(obj, a_class))
+    if (isinstance(obj, a_class) || type(obj) == a_class)
+        return (True)
+    return (False)
