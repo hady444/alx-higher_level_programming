@@ -25,6 +25,11 @@ TypeError: area() takes 1 positional argument but 2 were given
 >>> obj = BaseGeometry()
 >>> obj.integer_validator("HH", 5)
 
+>>> obj.__class__.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+
 >>> obj.integer_validator("GG", -2)
 Traceback (most recent call last):
 ValueError: GG must be greater than 0
