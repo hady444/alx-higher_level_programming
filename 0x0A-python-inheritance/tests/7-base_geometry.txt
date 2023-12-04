@@ -6,6 +6,9 @@
 >>> type(BaseGeometry.__dict__['area'])
 <class 'function'>
 
+>>> type(BaseGeometry.__dict__['integer_validator'])
+<class 'function'>
+
 >>> obj = BaseGeometry()
 >>> obj.area()
 Traceback (most recent call last):
@@ -23,6 +26,10 @@ ValueError: GG must be greater than 0
 Traceback (most recent call last):
 TypeError: HH must be an integer
 
+>>> obj.integer_validator(None, 5)
+
+>>> obj.integer_validator("", 5)
+
 >>> obj = BaseGeometry()
 >>> obj.integer_validator()
 Traceback (most recent call last):
@@ -37,3 +44,4 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> obj.integer_validator(5)
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
+
