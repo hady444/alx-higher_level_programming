@@ -39,10 +39,20 @@ TypeError: integer_validator() missing 3 required positional arguments: 'self', 
 Traceback (most recent call last):
 ValueError: GG must be greater than 0
 
->>> obj = BaseGeometry()
->>> obj.integer_validator("HH", 5.8)
-Traceback (most recent call last):
-TypeError: HH must be an integer
+integer_validator method float.0 value:
+    >>> obj.integer_validator("foo", 3.0)
+    Traceback (most recent call last):
+    TypeError: foo must be an integer
+
+integer_validator method float.x value:
+    >>> obj.integer_validator("arg", 3.14)
+    Traceback (most recent call last):
+    TypeError: arg must be an integer
+
+integer_validator method string value:
+    >>> obj.integer_validator("Bar", "bar")
+    Traceback (most recent call last):
+    TypeError: Bar must be an integer
 
 >>> obj.integer_validator(None, 5)
 
