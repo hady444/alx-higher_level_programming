@@ -1,0 +1,39 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> obj = BaseGeometry()
+>>> type(obj)
+<class '7-base_geometry.BaseGeometry'>
+
+>>> type(BaseGeometry.__dict__['area'])
+<class 'function'>
+
+>>> obj = BaseGeometry()
+>>> obj.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> obj = BaseGeometry()
+>>> obj.integer_validator("HH", 5)
+
+>>> obj.integer_validator("GG", -2)
+Traceback (most recent call last):
+ValueError: GG must be greater than 0
+
+>>> obj = BaseGeometry()
+>>> obj.integer_validator("HH", 5.8)
+Traceback (most recent call last):
+TypeError: HH must be an integer
+
+>>> obj = BaseGeometry()
+>>> obj.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> obj = BaseGeometry()
+>>> obj.integer_validator("f")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> obj = BaseGeometry()
+>>> obj.integer_validator(5)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
