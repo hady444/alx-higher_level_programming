@@ -4,7 +4,7 @@ empty class
 """
 
 
-def base_geometry:
+class base_geometry:
     """
     Empty class
     """
