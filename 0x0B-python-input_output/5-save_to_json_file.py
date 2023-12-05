@@ -10,5 +10,5 @@ def save_to_json_file(my_obj, filename):
         filename (str): json file extention to save to
     """
     import json
-    with open(filename, mode="r") as f:
-        f.write(json.loads(my_obj))
+    with open(filename, mode="w", encoding="UTF-8") as f:
+        json.dump(my_obj, f)
