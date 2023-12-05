@@ -9,6 +9,8 @@ def write_file(filename="", text=""):
     Args:
         filename (str): file passed with extension. Defaults to "".
         text (str): text. Defaults to ""
+    Return:
+        number of chars written
     """
     with open(file = filename, mode="w" ,encoding="UTF8") as f:
-        f.write(text)
+        return f.write(text)
