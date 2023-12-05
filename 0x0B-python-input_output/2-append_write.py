@@ -7,5 +7,5 @@ def append_write(filename="", text=""):
     Args:
         filename (str): file passed with extension. Defaults to "".
     """
-    with open(file=filename, mode="a",encoding="UTF8") as f:
+    with open(filename, mode="a", encoding="UTF8") as f:
         return f.write(text)
