@@ -8,4 +8,4 @@ def append_write(filename="", text=""):
         filename (str): file passed with extension. Defaults to "".
     """
     with open(file=filename, mode="a",encoding="UTF8") as f:
-        return f.write()
+        return f.write(text)
