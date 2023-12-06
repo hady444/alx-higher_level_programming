@@ -6,13 +6,20 @@ from sys import stdin
 def print_stats(file_size, status_code):
     print(f"File size: {file_size}")
     for key, val in status_code.items():
-        print(f"{key}: {val}")
+        print("{:s}: {:d}".format(key, val))
 
-status_code = {'200': 0, '301': 0, '400': 0, '401': 0,
-                '403': 0, '404': 0, '405': 0 , '500': 0}
+
+status_code = {
+            '200': 0,
+            '301': 0,
+            '400': 0,
+            '401': 0,
+            '403': 0,
+            '404': 0,
+            '405': 0,
+            '500': 0
+            }
 file_size = 0
-
-
 i = 0
 try:
     for line in stdin:
