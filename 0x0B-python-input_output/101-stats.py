@@ -25,7 +25,8 @@ i = 0
 try:
     for line in stdin:
         line = line.split(" ")
-        status_code[line[7]] += 1
+        if line[7] in status_code:
+            status_code[line[7]] += 1
         file_size += int(line[-1].split("\n")[0])
         if i % 10 == 0 and i != 0:
             print_stats(file_size, status_code)
