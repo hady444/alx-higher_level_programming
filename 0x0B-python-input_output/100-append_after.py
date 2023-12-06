@@ -11,9 +11,9 @@ def append_after(filename="", search_string="", new_string=""):
         new_string (str): string to write. Defaults to "".
     """
     with open(filename, 'r+', encoding='UTF-8') as f:
-        i = -1
-        for line in f.readlines():
-            i += len(line)
+        lines = f.readlines()
+        f.seek(0)
+        for line in lines:
+            f.write(line)
             if line.find(search_string) != -1:
-                f.seek(i)
                 f.write(new_string)
