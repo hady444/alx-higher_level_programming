@@ -6,7 +6,8 @@ from sys import stdin
 def print_stats(file_size, status_code):
     print(f"File size: {file_size}")
     for key, val in status_code.items():
-        print("{:s}: {:d}".format(key, val))
+        if val > 0:
+            print("{:s}: {:d}".format(key, val))
 
 
 status_code = {
