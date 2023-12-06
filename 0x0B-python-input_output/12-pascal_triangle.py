@@ -3,6 +3,14 @@
 
 
 def pascal_triangle(n):
+    """Generate pascale triangle
+
+    Args:
+        n (int): dims
+
+    Returns:
+        list: tringle list
+    """
     if n <= 0:
         return []
     tr = [[1]]
