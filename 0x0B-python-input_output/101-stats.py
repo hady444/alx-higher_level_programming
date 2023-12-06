@@ -26,7 +26,7 @@ try:
     for line in stdin:
         line = line.split()
         if len(line) >= 2:
-            if line[-2] in status_code.keys():
+            if line[-2] in status_code:
                 status_code[line[-2]] += 1
             file_size += int(line[-1].split("\n")[0])
             if i % 10 == 0 and i != 0:
