@@ -5,7 +5,7 @@ from sys import stdin
 
 def print_stats(file_size, status_code):
     print(f"File size: {file_size}")
-    for key, val in status_code.items():
+    for key, val in sorted(status_code.items()):
         if val > 0:
             print("{:s}: {:d}".format(key, val))
 
