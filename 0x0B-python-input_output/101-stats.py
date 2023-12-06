@@ -29,9 +29,9 @@ try:
             if line_s[-2] in status_code:
                 status_code[line_s[-2]] += 1
             file_size += int(line_s[-1])
-            if i % 10 == 0:
-                print_stats(file_size, status_code)
         i += 1
+        if i % 10 == 0:
+            print_stats(file_size, status_code)
     print_stats(file_size, status_code)
 except KeyboardInterrupt as ex:
     print_stats(file_size, status_code)
