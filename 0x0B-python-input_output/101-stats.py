@@ -30,5 +30,6 @@ try:
         if i % 10 == 0 and i != 0:
             print_stats(file_size, status_code)
         i += 1
+    print_stats(file_size, status_code)
 except KeyboardInterrupt as ex:
     print_stats(file_size, status_code)
