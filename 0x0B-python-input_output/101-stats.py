@@ -24,10 +24,10 @@ file_size = 0
 i = 0
 try:
     for line in stdin:
-        line = line.split(" ")
-        if len(line) >=2:
-            if line[7] in status_code.keys():
-                status_code[line[7]] += 1
+        line = line.split()
+        if len(line) >= 2:
+            if line[-2] in status_code.keys():
+                status_code[line[-2]] += 1
             file_size += int(line[-1].split("\n")[0])
             if i % 10 == 0 and i != 0:
                 print_stats(file_size, status_code)
