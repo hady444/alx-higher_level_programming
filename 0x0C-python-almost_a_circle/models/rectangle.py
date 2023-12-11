@@ -14,10 +14,10 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def __str__(self):
-        """str"""
-        return f"[{type(self).__name__}] ({self.id}) " +\
-                f"{self.x}/{self.y} - {self.width}/{self.height}"
+#    def __str__(self):
+#        """str"""
+#        return f"[{type(self).__name__}] ({self.id}) " +\
+#                f"{self.x}/{self.y} - {self.width}/{self.height}"
 
     @property
     def width(self):
