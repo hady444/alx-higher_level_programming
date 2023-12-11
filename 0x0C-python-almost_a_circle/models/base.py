@@ -50,7 +50,6 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        def load_from_file(cls):
         '''Loads string from file and unjsonifies.'''
         from os import path
         file = "{}.json".format(cls.__name__)
