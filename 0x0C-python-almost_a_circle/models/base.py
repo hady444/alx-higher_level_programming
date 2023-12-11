@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Module"""
+import csv
 
 
 class Base:
