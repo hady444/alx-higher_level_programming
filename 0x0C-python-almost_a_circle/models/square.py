@@ -2,14 +2,16 @@
 """Square Module"""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """ Class Square inherites from Rectangle class"""
 
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
-    
+
     def __str__(self):
-        return f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.height}"
+        return f"[{type(self).__name__}] ({self.id}) \
+                {self.x}/{self.y} - {self.height}"
 
     @property
     def size(self):
@@ -41,4 +43,3 @@ class Square(Rectangle):
                 'x': self.x,
                 'y': self.y
         }
-

@@ -6,8 +6,9 @@ class Base:
     """Base class"""
 
     __nb_objects = 0
+
     def __init__(self, id=None):
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -46,6 +47,3 @@ class Base:
             new = None
         new.update(**dictionary)
         return (new)
-
-    def load_from_file(cls):
-        
