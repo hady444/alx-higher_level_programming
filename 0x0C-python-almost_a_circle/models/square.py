@@ -38,14 +38,11 @@ class Square(Rectangle):
             self.y = y
 
     def update(self, *args, **kwargs):
-        if args == ():
-            for kw, val in kwargs.items():
-                setattr(self, kw, val)
-
-        attribute_names = ['id', 'size', 'x', 'y']
-
-        for name, value in zip(attribute_names, args):
-            setattr(self, name, value)
+        '''Updates instance attributes via no-keyword & keyword args.'''
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
 
     def to_dictionary(self):
         return {
