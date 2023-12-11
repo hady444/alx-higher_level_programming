@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Rectangle class"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -13,15 +14,18 @@ class Rectangle(Base):
         super().__init__(id)
 
     def __str__(self):
+        """str"""
         return f"[{type(self).__name__}] ({self.id}) " +\
-                f"{self.x}/{self.y} - {self.width}/{self.height}"
+            f"{self.x}/{self.y} - {self.width}/{self.height}"
 
     @property
     def width(self):
+        '''width'''
         return self.__width
 
     @width.setter
     def width(self, value):
+        '''width'''
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -30,10 +34,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        '''height'''
         return self.__height
 
     @height.setter
     def height(self, value):
+        '''height'''
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -42,10 +48,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        '''  '''
         return self.__x
 
     @x.setter
     def x(self, value):
+        '''  '''
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -58,6 +66,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        '''  '''
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -65,9 +74,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        '''  '''
         return (self.__width * self.__height)
 
     def display(self):
+        '''  '''
         for _ in range(self.y):
             print()
         for _ in range(self.__height):
@@ -78,6 +89,7 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
+        '''  '''
         if args == ():
             for kw, val in kwargs.items():
                 setattr(self, kw, val)
@@ -88,10 +100,11 @@ class Rectangle(Base):
             setattr(self, name, value)
 
     def to_dictionary(self):
-        return ({
+        '''  '''
+        return {
             'id': self.id,
             'width': self.width,
             'height': self.height,
             'x': self.x,
             'y': self.y
-        })
+        }
