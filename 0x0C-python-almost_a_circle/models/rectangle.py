@@ -54,7 +54,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        return self.__y
+        return (self.__y)
 
     @y.setter
     def y(self, value):
@@ -88,10 +88,10 @@ class Rectangle(Base):
             setattr(self, name, value)
 
     def to_dictionary(self):
-        return {
+        return ({
             'id': self.id,
             'width': self.width,
             'height': self.height,
             'x': self.x,
             'y': self.y
-        }
+        })
