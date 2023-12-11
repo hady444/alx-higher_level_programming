@@ -74,39 +74,3 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-
-    def area(self):
-        """area"""
-        return (self.__width * self.__height)
-
-    def display(self):
-        """display"""
-        for _ in range(self.y):
-            print()
-        for _ in range(self.__height):
-            for _ in range(self.x):
-                print(end=" ")
-            for _ in range(self.__width):
-                print("#", end='')
-            print("")
-
-#    def update(self, *args, **kwargs):
-#        """update"""
-#        if args == ():
-#            for kw, val in kwargs.items():
-#                setattr(self, kw, val)
-
-#        attribute_names = ['id', 'width', 'height', 'x', 'y']
-
-#        for name, value in zip(attribute_names, args):
-#            setattr(self, name, value)
-
-    def to_dictionary(self):
-        """to dictionary"""
-        return ({
-            'id': self.id,
-            'width': self.width,
-            'height': self.height,
-            'x': self.x,
-            'y': self.y
-        })
