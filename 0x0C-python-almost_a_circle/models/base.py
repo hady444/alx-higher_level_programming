@@ -47,3 +47,11 @@ class Base:
             new = None
         new.update(**dictionary)
         return (new)
+
+    @classmmethod
+    def load_from_file(cls):
+        import os.path
+        if not path.exists(f"{cls.__name__}.json}"):
+            return []
+        with open(f"{cls.__name__}.json}", 'w', encoding='UTF-8') as f:
+            return [cls.create(**dic) for dic in cls.from_json_string(f.read())]
