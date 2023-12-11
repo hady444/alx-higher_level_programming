@@ -48,10 +48,13 @@ class Base:
         new.update(**dictionary)
         return (new)
 
-    @classmmethod
+    @classmethod
     def load_from_file(cls):
-        import os.path
-        if not path.isfile(f"{cls.__name__}.json}"):
+        def load_from_file(cls):
+        '''Loads string from file and unjsonifies.'''
+        from os import path
+        file = "{}.json".format(cls.__name__)
+        if not path.isfile(file):
             return []
-        with open(f"{cls.__name__}.json}", 'w', encoding='UTF-8') as f:
-            return [cls.create(**dic) for dic in cls.from_json_string(f.read())]
+        with open(file, "r", encoding="utf-8") as f:
+            return [cls.create(**d) for d in cls.from_json_string(f.read())]
