@@ -10,7 +10,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return f"[{type(self).__name__}] ({self.id}) " + \
+        return f"[{type(self).__name__}] ({self.id}) " +\
                 f"{self.x}/{self.y} - {self.height}"
 
     @property
@@ -25,6 +25,17 @@ class Square(Rectangle):
             raise ValueError("size must be > 0")
         self.width = value
         self.height = value
+
+    def __update(self, id=None, size=None, x=None, y=None):
+        '''Internal method that updates instance attributes via */**args.'''
+        if id is not None:
+            self.id = id
+        if size is not None:
+            self.size = size
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
 
     def update(self, *args, **kwargs):
         if args == ():

@@ -87,3 +87,13 @@ class Rectangle(Base):
             for _ in range(self.width):
                 print("#", end='')
             print("")
+
+    def update(self, *args, **kwargs):
+        if args == ():
+            for kw, val in kwargs.items():
+                setattr(self, kw, val)
+
+        attribute_names = ['id', 'width', 'height', 'x', 'y']
+
+        for name, value in zip(attribute_names, args):
+            setattr(self, name, value)
