@@ -1,8 +1,9 @@
 #!/usr/bin/node
-function factorial (num) {
-  if (num === 1 || !(num)) {
-    return (1);
+function factorial (n) {
+  if (isNaN(n) || n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
   }
-  return (num * factorial(num - 1));
-}
+};
 console.log(parseInt(factorial(process.argv[2])));
