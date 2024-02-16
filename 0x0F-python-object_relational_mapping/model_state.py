@@ -18,5 +18,5 @@ class State(Base):
             name (string): that represents a column of a string
     """
     __tablename__ = 'states'
-    id = Column(INTEGER, primary_key=True, nullable=False)
+    id = Column(INTEGER, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
