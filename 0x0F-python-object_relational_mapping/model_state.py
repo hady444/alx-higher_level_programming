@@ -10,11 +10,13 @@ Base = declarative_base()
 
 
 class State(Base):
-    """State class:
-        inherits from Base
-        links to the MySQL table states
-        id that represents a column of an auto-generated, unique integer
-        name that represents a column of a string
     """
+        inherits from Base links to the MySQL table states
+        
+        Attributes:
+            id (int): that represents a column of an auto-generated, unique integer
+            name (string): that represents a column of a string
+    """
+    __tablename__ = 'state'
     id = Column(INTEGER, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
