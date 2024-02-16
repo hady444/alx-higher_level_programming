@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    class definition of a State and an instance Base = declarative_base()
+    class definition of a State and an instance Base
 """
 
 
@@ -12,11 +12,11 @@ Base = declarative_base()
 class State(Base):
     """
         inherits from Base links to the MySQL table states
-        
+
         Attributes:
-            id (int): that represents a column of an auto-generated, unique integer
+            id (int): that represents a column of unique integer
             name (string): that represents a column of a string
     """
-    __tablename__ = 'state'
+    __tablename__ = 'states'
     id = Column(INTEGER, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
