@@ -21,11 +21,6 @@ if __name__ == '__main__':
             join states as s on s.id = c.state_id WHERE s.name = %s\
             ORDER BY c.id ASC", (state_name,))
     data = cur.fetchall()
-    le = len(data)
-    for i, row in enumerate(data):
-        if i < le - 1:
-            print(row[0], end=', ')
-        else:
-            print(row[0])
+    print(", ".join([city[0] for city in data]))
     cur.close()
     db.close()
