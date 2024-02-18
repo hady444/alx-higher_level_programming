@@ -13,7 +13,7 @@ if __name__ == '__main__':
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).order_by(State.id).one()
+    state = session.query(State).order_by(State.id).first()
     if len(state) == 0:
         print("Nothing")
     else:
