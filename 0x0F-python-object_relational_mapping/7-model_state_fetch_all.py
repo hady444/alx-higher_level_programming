@@ -15,5 +15,5 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     session = Session()
     for row in session.query(State).order_by(State.id).all():
-        print(f'{row.id}: {row.name}')
+        print(f'{row[0]}: {row[1]}')
     session.close()
