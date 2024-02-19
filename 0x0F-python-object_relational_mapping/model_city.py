@@ -9,9 +9,9 @@ from sqlalchemy import ForeignKey
 from sqlalchemy import Column
 from sqlalchemy import String
 from sqlalchemy import Integer
-
-
 Base = declarative_base()
+
+
 class City(Base):
     """class definition of a City"""
     __tablename__ = 'cities'
