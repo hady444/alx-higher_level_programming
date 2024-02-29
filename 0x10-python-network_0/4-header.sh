@@ -1,3 +1,3 @@
 #!/bin/bash
-# display headers
-
+# takes in a URL as an argument, sends a GET , and displays the body 
+curl -sH "X-School-User-Id: 98" $1
