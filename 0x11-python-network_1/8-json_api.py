@@ -10,18 +10,17 @@ import sys
 
 if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
-    q = ""
-    if len(sys.argv) == 0:
-        q = ""
+    if len(sys.argv) <= 1:
+        argument = ""
     else:
-        q = sys.argv[1]
-    payload = {'q': q}
+        argument = sys.argv[1]
+    payload = {'q': argument}
     req = requests.post(url, data=payload)
     try:
-        r = req.json()
-        if r == {}:
+        rsp = req.json()
+        if rsp == {}:
             print("No result")
         else:
-            print("[{}] {}".format(r.get("id"), r.get("name")))
+            print("[{}] {}".format(rsp.get("id"), rsp.get("name")))
     except ValueError:
         print("Not a valid JSON")
