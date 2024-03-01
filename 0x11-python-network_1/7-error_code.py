@@ -10,7 +10,7 @@ import sys
 
 if __name__ == '__main__':
     req = requests.get(sys.argv[1])
-    stat_code = req.code
+    stat_code = req.status_code
     if stat_code >= 400:
         print("Error code: {}".format(stat_code))
     else:
