@@ -3,8 +3,8 @@
 
 
 import urllib.request
-from sys import argv
+import sys.argv
 
-url = argv[1]
+url = sys.argv[1]
 with urllib.request.urlopen(url) as response:
     print(response.headers.get('X-Request-Id'))
