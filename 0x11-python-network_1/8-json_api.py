@@ -11,7 +11,9 @@ import sys
 if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
     q = ""
-    if sys.argv[1]:
+    if len(sys.argv) == 0:
+        q = ""
+    else:
         q = sys.argv[1]
     payload = {'q': q}
     req = requests.post(url, data=payload)
