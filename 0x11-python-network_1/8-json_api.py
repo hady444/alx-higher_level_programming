@@ -15,8 +15,8 @@ if __name__ == '__main__':
         q = sys.argv[1]
     payload = {'q': q}
     req = requests.post(url, data=payload)
-    r = req.json()
     try:
+        r = req.json()
         if r == {}:
             print("No result")
         else:
